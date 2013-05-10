@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="carform">
+			<h:panelGrid columns="2">
+
+				<h:outputText value="#{msg.carName}" />
+				<h:inputText id="name" value="#{carBean.autko.name}" />
+
+				<h:outputText value="#{msg.carModel}" />
+				<h:inputText id="model" value="#{carBean.autko.model}" />
+				
+				<h:outputText value="#{msg.carLicenceplate}" />
+				<h:inputText id="yop" value="#{carBean.autko.licenceplate}" />
+				
+				<h:outputText value="#{msg.carColor}" />
+				<h:inputText id="color" value="#{carBean.autko.color}" />
+				
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.carAdd}" action="#{carBean.addCars}" />
+				
+			<h:panelGrid>
+				<h:messages  errorStyle="color:red" showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

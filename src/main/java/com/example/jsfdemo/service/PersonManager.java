@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.xml.ws.soap.Addressing;
 
 import com.example.jsfdemo.domain.Person;
 
 @ApplicationScoped
 public class PersonManager {
 	private List<Person> db = new ArrayList<Person>();
+	
+	
+	
 
 	public void addPerson(Person person) {
 		Person newPerson = new Person();

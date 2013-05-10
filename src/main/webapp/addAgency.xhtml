@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="agencyform">
+			<h:panelGrid columns="2">
+
+				<h:outputText value="#{msg.agencyName}" />
+				<h:inputText id="name" value="#{agencyBean.agencja.name}" />
+
+				<h:outputText value="#{msg.agencyPhone}" />
+				<h:inputText id="phone" value="#{agencyBean.agencja.phoneNumber}" />
+				
+				<h:outputText value="#{msg.agencyEmail}" />
+				<h:inputText id="email" value="#{agencyBean.agencja.email}" />
+				
+				<h:outputText value="#{msg.agencyCode}" />
+				<h:inputText id="code" value="#{agencyBean.agencja.codeNumber}" />
+				
+				
+			</h:panelGrid>
+
+			<h:commandButton value="#{msg.addAgency}"
+				action="#{agencyBean.addAgency}" />
+				
+			<h:panelGrid>
+				<h:messages  errorStyle="color:purple" showDetail="#{true}" showSummary="#{false}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

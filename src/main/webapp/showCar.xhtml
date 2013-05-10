@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	
+	<ui:define name="content">
+	
+    <h:form>
+    
+     <h:dataTable value="#{carBean.allCars}" var="item">
+      <f:facet name="header">#{msg.carAll}</f:facet>
+      
+      <h:column>
+        <f:facet name="header">#{msg.carName}</f:facet>
+        #{item.name}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">#{msg.carLicenceplate}</f:facet>
+        #{item.licenceplate}
+      </h:column>
+      
+      <h:column>
+        <f:facet name="header">#{msg.carModel}</f:facet>
+        #{item.model}
+        </h:column>
+        
+        <h:column>
+        <f:facet name="header">#{msg.carColor}</f:facet>
+        #{item.color}
+        
+      </h:column>
+      
+     </h:dataTable>
+    </h:form>
+      
+	</ui:define>
+	
+</ui:composition>
