@@ -37,7 +37,7 @@ public class CarBean implements Serializable{
 	
 	//Akcja
 	public String addCars(){
-		cm.addCar(autko);
+		cm.addCar(autko, null);
 		return "showCar";
 	}
 	

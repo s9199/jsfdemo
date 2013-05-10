@@ -24,28 +24,25 @@ public class CarManager {
 		return null;
 	}
 
-	public void addCar(Car car) {
-		if (parametrCar.getLicenceplate() == null)
+	public void addCar(Car car, Object p) {
+		if (car.getLicenceplate() == null)
 			return;
-		Person p = personManager.get(car.getLicenceplate().getName());
+		// Person p = personManager.get(car.getLicenceplate().getName());
 		if (p != null) {
-			p.getCars().add(car);
+			((Person) p).getCars().add(car);
 		}
-		Car c = get(Car.getName());
+	
+		Car c = get(car.getName());
 		if (c == null)
-			rs.add(Car);
+			rs.add(car);
 		else {
-			c.setName(Car.getName());
-			c.setLicenceplate(Car.getLicenceplate());
-			c.setModel(Car.getModel());
-			c.setColor(Car.getColor());
-
+			c.setName(car.getName());
+			c.setLicenceplate(car.getLicenceplate());
+			c.setModel(car.getModel());
+			c.setColor(car.getColor());
 		}
-
 		Car newCar = new Car();
-
 		rs.add(newCar);
-
 	}
 
 	public void updateCar(Car car) {

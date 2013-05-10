@@ -7,7 +7,7 @@ public class Car {
 	private String color;
 
 
-	public static String getName(){
+	public  String getName(){
 		return name;
 	}
 	public void setName(String name){

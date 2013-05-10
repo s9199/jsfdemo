@@ -12,8 +12,6 @@ import com.example.jsfdemo.domain.Person;
 public class PersonManager {
 	private List<Person> db = new ArrayList<Person>();
 	
-	
-	
 
 	public void addPerson(Person person) {
 		Person newPerson = new Person();
